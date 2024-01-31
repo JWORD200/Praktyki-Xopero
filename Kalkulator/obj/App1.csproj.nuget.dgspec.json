@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Xopero\\Documents\\Praktyki\\App1\\App1.csproj": {}
+    "C:\\Users\\Xopero\\Documents\\Praktyki\\Github\\Kalkulator\\App1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Xopero\\Documents\\Praktyki\\App1\\App1.csproj": {
+    "C:\\Users\\Xopero\\Documents\\Praktyki\\Github\\Kalkulator\\App1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Xopero\\Documents\\Praktyki\\App1\\App1.csproj",
+        "projectUniqueName": "C:\\Users\\Xopero\\Documents\\Praktyki\\Github\\Kalkulator\\App1.csproj",
         "projectName": "App1",
-        "projectPath": "C:\\Users\\Xopero\\Documents\\Praktyki\\App1\\App1.csproj",
+        "projectPath": "C:\\Users\\Xopero\\Documents\\Praktyki\\Github\\Kalkulator\\App1.csproj",
         "packagesPath": "C:\\Users\\Xopero\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Xopero\\Documents\\Praktyki\\App1\\obj\\",
+        "outputPath": "C:\\Users\\Xopero\\Documents\\Praktyki\\Github\\Kalkulator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Xopero\\AppData\\Roaming\\NuGet\\NuGet.Config",
