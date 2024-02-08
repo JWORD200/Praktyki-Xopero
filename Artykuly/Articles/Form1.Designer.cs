@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.Sqlite;
+using System.Windows.Forms;
 
 namespace Articles
 {
@@ -30,23 +31,24 @@ namespace Articles
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
             labelNoDb = new Label();
             buttonDeleteSelected = new Button();
             buttonEditSelected = new Button();
             buttonAdd = new Button();
-            table = new TableLayoutPanel();
             splitContainer1 = new SplitContainer();
-            vScrollBar2 = new VScrollBar();
-            vScrollBar1 = new VScrollBar();
-            dataGridView1 = new DataGridView();
+            articlesGirdView = new DataGridView();
+            textBoxContent = new TextBox();
+            labelContent = new Label();
+            buttoncolumn = new DataGridViewButtonColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)articlesGirdView).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -92,7 +94,7 @@ namespace Articles
             buttonDeleteSelected.Margin = new Padding(10);
             buttonDeleteSelected.Name = "buttonDeleteSelected";
             buttonDeleteSelected.Size = new Size(134, 30);
-            buttonDeleteSelected.TabIndex = 4;
+            buttonDeleteSelected.TabIndex = 3;
             buttonDeleteSelected.Text = "Delete selected article";
             buttonDeleteSelected.UseVisualStyleBackColor = false;
             buttonDeleteSelected.Click += buttonDeleteSelected_Click;
@@ -108,7 +110,7 @@ namespace Articles
             buttonEditSelected.Margin = new Padding(10);
             buttonEditSelected.Name = "buttonEditSelected";
             buttonEditSelected.Size = new Size(120, 30);
-            buttonEditSelected.TabIndex = 3;
+            buttonEditSelected.TabIndex = 2;
             buttonEditSelected.Text = "Edit selected article";
             buttonEditSelected.UseVisualStyleBackColor = false;
             buttonEditSelected.Click += buttonEditSelected_Click;
@@ -124,96 +126,106 @@ namespace Articles
             buttonAdd.Margin = new Padding(10);
             buttonAdd.Name = "buttonAdd";
             buttonAdd.Size = new Size(101, 30);
-            buttonAdd.TabIndex = 0;
+            buttonAdd.TabIndex = 1;
             buttonAdd.Text = "Add new article";
             buttonAdd.UseVisualStyleBackColor = false;
             buttonAdd.Click += buttonAdd_Click;
             // 
-            // table
-            // 
-            table.AutoSize = true;
-            table.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            table.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
-            table.ColumnCount = 2;
-            table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            table.Dock = DockStyle.Left;
-            table.GrowStyle = TableLayoutPanelGrowStyle.FixedSize;
-            table.Location = new Point(0, 55);
-            table.Margin = new Padding(20);
-            table.Name = "table";
-            table.RowCount = 5;
-            table.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            table.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            table.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            table.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            table.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            table.Size = new Size(3, 806);
-            table.TabIndex = 1;
-            // 
             // splitContainer1
             // 
             splitContainer1.Dock = DockStyle.Fill;
-            splitContainer1.Location = new Point(3, 55);
+            splitContainer1.Location = new Point(0, 55);
             splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
+            splitContainer1.Panel1.AutoScroll = true;
             splitContainer1.Panel1.BackColor = SystemColors.ControlDark;
-            splitContainer1.Panel1.Controls.Add(vScrollBar2);
+            splitContainer1.Panel1.Controls.Add(articlesGirdView);
             // 
             // splitContainer1.Panel2
             // 
-            splitContainer1.Panel2.Controls.Add(vScrollBar1);
-            splitContainer1.Size = new Size(881, 806);
-            splitContainer1.SplitterDistance = 526;
+            splitContainer1.Panel2.Controls.Add(textBoxContent);
+            splitContainer1.Panel2.Controls.Add(labelContent);
+            splitContainer1.Size = new Size(884, 806);
+            splitContainer1.SplitterDistance = 250;
             splitContainer1.TabIndex = 2;
             // 
-            // vScrollBar2
+            // articlesGirdView
             // 
-            vScrollBar2.Dock = DockStyle.Right;
-            vScrollBar2.Location = new Point(509, 0);
-            vScrollBar2.Name = "vScrollBar2";
-            vScrollBar2.Size = new Size(17, 806);
-            vScrollBar2.TabIndex = 0;
+            articlesGirdView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            articlesGirdView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            articlesGirdView.BorderStyle = BorderStyle.None;
+            articlesGirdView.CellBorderStyle = DataGridViewCellBorderStyle.SingleVertical;
+            articlesGirdView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            articlesGirdView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            articlesGirdView.Dock = DockStyle.Top;
+            articlesGirdView.GridColor = SystemColors.ControlDarkDark;
+            articlesGirdView.Location = new Point(0, 0);
+            articlesGirdView.Margin = new Padding(20);
+            articlesGirdView.Name = "articlesGirdView";
+            articlesGirdView.RowHeadersWidth = 40;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(224, 224, 224);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            articlesGirdView.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            articlesGirdView.ScrollBars = ScrollBars.None;
+            articlesGirdView.Size = new Size(250, 312);
+            articlesGirdView.TabIndex = 0;
+            articlesGirdView.CellClick += ArticlesGridView_CellClick;
             // 
-            // vScrollBar1
+            // textBoxContent
             // 
-            vScrollBar1.Dock = DockStyle.Right;
-            vScrollBar1.Location = new Point(334, 0);
-            vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(17, 806);
-            vScrollBar1.TabIndex = 0;
+            textBoxContent.BackColor = SystemColors.ControlDarkDark;
+            textBoxContent.BorderStyle = BorderStyle.None;
+            textBoxContent.Location = new Point(66, 50);
+            textBoxContent.Margin = new Padding(50);
+            textBoxContent.Multiline = true;
+            textBoxContent.Name = "textBoxContent";
+            textBoxContent.Size = new Size(656, 603);
+            textBoxContent.TabIndex = 2;
             // 
-            // dataGridView1
+            // labelContent
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(40, 40);
-            dataGridView1.Margin = new Padding(20);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(428, 159);
-            dataGridView1.TabIndex = 1;
+            labelContent.AutoSize = true;
+            labelContent.BackColor = SystemColors.ControlDarkDark;
+            labelContent.Dock = DockStyle.Left;
+            labelContent.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            labelContent.Location = new Point(0, 0);
+            labelContent.Name = "labelContent";
+            labelContent.Size = new Size(0, 21);
+            labelContent.TabIndex = 1;
+            // 
+            // buttoncolumn
+            // 
+            buttoncolumn.Name = "buttoncolumn";
+            buttoncolumn.Text = "Select";
+            buttoncolumn.Width = 50;
             // 
             // Form1
             // 
             BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(884, 861);
             Controls.Add(splitContainer1);
-            Controls.Add(table);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             WindowState = FormWindowState.Maximized;
+            Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel2.ResumeLayout(false);
+            splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)articlesGirdView).EndInit();
             ResumeLayout(false);
             PerformLayout();
+        }
+
+        private void ArticlesGirdView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -222,12 +234,11 @@ namespace Articles
         private Button buttonAdd;
         private Button buttonDeleteSelected;
         private Button buttonEditSelected;
-        private TableLayoutPanel table;
-        private Splitter splitter;
         private SplitContainer splitContainer1;
-        private VScrollBar vScrollBar1;
-        private VScrollBar vScrollBar2;
         private Label labelNoDb;
-        private DataGridView dataGridView1;
+        private DataGridView articlesGirdView;
+        private DataGridViewButtonColumn buttoncolumn;
+        private Label labelContent;
+        private TextBox textBoxContent;
     }
 }

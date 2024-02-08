@@ -1,0 +1,20 @@
+C:\Users\Xopero\Documents\Praktyki\Github\Kursy-walut\Exchange rates\bin\Debug\net8.0-windows\Exchange rates.exe
+C:\Users\Xopero\Documents\Praktyki\Github\Kursy-walut\Exchange rates\bin\Debug\net8.0-windows\Exchange rates.deps.json
+C:\Users\Xopero\Documents\Praktyki\Github\Kursy-walut\Exchange rates\bin\Debug\net8.0-windows\Exchange rates.runtimeconfig.json
+C:\Users\Xopero\Documents\Praktyki\Github\Kursy-walut\Exchange rates\bin\Debug\net8.0-windows\Exchange rates.dll
+C:\Users\Xopero\Documents\Praktyki\Github\Kursy-walut\Exchange rates\bin\Debug\net8.0-windows\Exchange rates.pdb
+C:\Users\Xopero\Documents\Praktyki\Github\Kursy-walut\Exchange rates\obj\Debug\net8.0-windows\Exchange_rates.Form1.resources
+C:\Users\Xopero\Documents\Praktyki\Github\Kursy-walut\Exchange rates\obj\Debug\net8.0-windows\Exchange rates.csproj.GenerateResource.cache
+C:\Users\Xopero\Documents\Praktyki\Github\Kursy-walut\Exchange rates\obj\Debug\net8.0-windows\Exchange rates.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Xopero\Documents\Praktyki\Github\Kursy-walut\Exchange rates\obj\Debug\net8.0-windows\Exchange rates.AssemblyInfoInputs.cache
+C:\Users\Xopero\Documents\Praktyki\Github\Kursy-walut\Exchange rates\obj\Debug\net8.0-windows\Exchange rates.AssemblyInfo.cs
+C:\Users\Xopero\Documents\Praktyki\Github\Kursy-walut\Exchange rates\obj\Debug\net8.0-windows\Exchange rates.csproj.CoreCompileInputs.cache
+C:\Users\Xopero\Documents\Praktyki\Github\Kursy-walut\Exchange rates\obj\Debug\net8.0-windows\Exchange rates.sourcelink.json
+C:\Users\Xopero\Documents\Praktyki\Github\Kursy-walut\Exchange rates\obj\Debug\net8.0-windows\Exchange rates.dll
+C:\Users\Xopero\Documents\Praktyki\Github\Kursy-walut\Exchange rates\obj\Debug\net8.0-windows\refint\Exchange rates.dll
+C:\Users\Xopero\Documents\Praktyki\Github\Kursy-walut\Exchange rates\obj\Debug\net8.0-windows\Exchange rates.pdb
+C:\Users\Xopero\Documents\Praktyki\Github\Kursy-walut\Exchange rates\obj\Debug\net8.0-windows\Exchange rates.genruntimeconfig.cache
+C:\Users\Xopero\Documents\Praktyki\Github\Kursy-walut\Exchange rates\obj\Debug\net8.0-windows\ref\Exchange rates.dll
+C:\Users\Xopero\Documents\Praktyki\Github\Kursy-walut\Exchange rates\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\Xopero\Documents\Praktyki\Github\Kursy-walut\Exchange rates\obj\Debug\net8.0-windows\Exchange rates.csproj.AssemblyReference.cache
+C:\Users\Xopero\Documents\Praktyki\Github\Kursy-walut\Exchange rates\obj\Debug\net8.0-windows\Exchange rates.csproj.CopyComplete

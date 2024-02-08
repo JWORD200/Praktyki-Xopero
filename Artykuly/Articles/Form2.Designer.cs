@@ -46,13 +46,6 @@ namespace Articles
             panelSubmit.BackColor = SystemColors.ControlDark;
             panelSubmit.BorderStyle = BorderStyle.FixedSingle;
             panelSubmit.Controls.Add(buttonSubmit);
-            panelSubmit.Controls.Add(labelNoDb);
-            panelSubmit.Controls.Add(label1);
-            panelSubmit.Controls.Add(label2);
-            panelSubmit.Controls.Add(label3);
-            panelSubmit.Controls.Add(inputNewArticleName);
-            panelSubmit.Controls.Add(inputNewCategory);
-            panelSubmit.Controls.Add(inputNewContent);
             panelSubmit.Dock = DockStyle.Bottom;
             panelSubmit.Location = new Point(0, 400);
             panelSubmit.Margin = new Padding(20);
@@ -74,7 +67,7 @@ namespace Articles
             buttonSubmit.Size = new Size(101, 30);
             buttonSubmit.Location = new Point(138, 5);
             buttonSubmit.Dock = DockStyle.Bottom;
-            buttonSubmit.TabIndex = 0;
+            buttonSubmit.TabIndex = 4;
             buttonSubmit.Text = "Submit";
             buttonSubmit.UseVisualStyleBackColor = false;
             buttonSubmit.Visible = true;
@@ -82,31 +75,31 @@ namespace Articles
             // 
             // labelNoDb
             // 
-            labelNoDb.Anchor = AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Left;
-            labelNoDb.AutoSize = true;
-            labelNoDb.ForeColor = Color.Red;
-            labelNoDb.Dock = DockStyle.Bottom;
-            labelNoDb.Name = "labelNoDb";
-            labelNoDb.Size = new Size(140, 50) ;
-            labelNoDb.TabIndex = 5;
-            labelNoDb.Text = "DATABASE CONNECTION ERROR";
-            labelNoDb.Visible = false;
-            labelNoDb.Font = new Font("Segoe UI", 12F);
-            labelNoDb.TextAlign = ContentAlignment.MiddleCenter;
+            //labelNoDb.Anchor = AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Left;
+            //labelNoDb.AutoSize = true;
+            //labelNoDb.ForeColor = Color.Red;
+            //labelNoDb.Dock = DockStyle.Bottom;
+            //labelNoDb.Name = "labelNoDb";
+            //labelNoDb.Size = new Size(140, 50) ;
+            //labelNoDb.TabIndex = 5;
+            //labelNoDb.Text = "DATABASE CONNECTION ERROR";
+            //labelNoDb.Visible = false;
+            //labelNoDb.Font = new Font("Segoe UI", 12F);
+            //labelNoDb.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // inputNewArticleName
             // 
             inputNewArticleName.Location = new Point(200, 20);
             inputNewArticleName.Name = "inputNewArticleName";
             inputNewArticleName.Size = new Size(100, 23);
-            inputNewArticleName.TabIndex = 2;
+            inputNewArticleName.TabIndex = 1;
             // 
             // inputNewCategory
             // 
             inputNewCategory.Location = new Point(200, 70);
             inputNewCategory.Name = "inputNewCategory";
             inputNewCategory.Size = new Size(100, 23);
-            inputNewCategory.TabIndex = 1;
+            inputNewCategory.TabIndex = 2;
             // 
             // inputNewContent
             // 
@@ -114,7 +107,7 @@ namespace Articles
             inputNewContent.Multiline = true;
             inputNewContent.Name = "inputNewContent";
             inputNewContent.Size = new Size(250, 140);
-            inputNewContent.TabIndex = 0;
+            inputNewContent.TabIndex = 3;
             inputNewContent.Anchor = AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Left;
             // 
             // label1

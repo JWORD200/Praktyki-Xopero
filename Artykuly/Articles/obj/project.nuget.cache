@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7763OmU+DGdjnnN2uHxzIFmQAR1sCHiDswh/qpr/tud/eC4mPkpLqauH7jH25WIz2bypE4RNE3t7WJhbPsBVtg==",
+  "dgSpecHash": "q/raIpSjgLqxBhtyz1WRiYId9pc50NjWq221UpJ/Sz0W/FDkpZ9Zt8b9ehde7m5yFAk13Lk8e4XeMphwidzCLw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Xopero\\Documents\\Praktyki\\Github\\Artykuly\\Articles\\Articles.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,8 @@
     "C:\\Users\\Xopero\\.nuget\\packages\\sqlitepclraw.core\\2.1.6\\sqlitepclraw.core.2.1.6.nupkg.sha512",
     "C:\\Users\\Xopero\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.6\\sqlitepclraw.lib.e_sqlite3.2.1.6.nupkg.sha512",
     "C:\\Users\\Xopero\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.6\\sqlitepclraw.provider.e_sqlite3.2.1.6.nupkg.sha512",
+    "C:\\Users\\Xopero\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.118\\stub.system.data.sqlite.core.netstandard.1.0.118.nupkg.sha512",
+    "C:\\Users\\Xopero\\.nuget\\packages\\system.data.sqlite.core\\1.0.118\\system.data.sqlite.core.1.0.118.nupkg.sha512",
     "C:\\Users\\Xopero\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
   ],
   "logs": []

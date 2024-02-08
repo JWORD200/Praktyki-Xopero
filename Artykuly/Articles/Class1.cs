@@ -1,39 +1,36 @@
-﻿using Microsoft.Data.Sqlite;
+﻿using System.Data.SQLite;
 using Microsoft.Data;
 using System;
+using System.Data;
 
-public class DatabaseActions
+namespace Articles
 {
-	public DatabaseActions()
+	public class DatabaseActions
 	{
-		if (File.Exists("artykuly.db"))
+		private static string dbPath = @"Data source=C:\Users\Xopero\Documents\Praktyki\Github\Artykuly\Articles\artykuly.db";
+
+		public static DataTable ExecuteQuery(String query)
 		{
+
+			SQLiteConnection connection = new SQLiteConnection(dbPath);
+			connection.Open();
+			SQLiteCommand command = new SQLiteCommand(query, connection);
+			SQLiteDataAdapter adapter = new SQLiteDataAdapter(command);
+			DataTable dataTable = new DataTable();
+
+			adapter.Fill(dataTable);
+			return dataTable;
+		}
+
+		public static int ExecuteNonQuery(String query)
+		{
+			SQLiteConnection connection = new SQLiteConnection(dbPath);
+			connection.Open();
+			SQLiteCommand command = new SQLiteCommand(query, connection);
+			command.CommandText = query;
+			command.CommandType = CommandType.Text;
 			
-		}
-		else
-		{
-
+			return command.ExecuteNonQuery();
 		}
 	}
-
-	public Connector GetArticleDetails()
-	{
-
-	}
-
-}
-
-public class Connector
-{
-	private static string dbPath = @"Data source=C:\Users\Xopero\Documents\Praktyki\Github\Artykuly\Articles\artykuly.db";
-	public Connector(string querry)
-	{
-        SqliteConnection connection = new SqliteConnection(dbPath);
-		connection.Open();
-		SqliteCommand command = connection.CreateCommand();
-		command.CommandText = querry;
-		SqliteDataReader
-		
-
-    }
 }
