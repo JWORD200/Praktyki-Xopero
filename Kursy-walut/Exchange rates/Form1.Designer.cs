@@ -94,7 +94,7 @@
             panelInfo2.Controls.Add(currencyMid);
             panelInfo2.Location = new Point(16, 165);
             panelInfo2.Name = "panelInfo2";
-            panelInfo2.Size = new Size(238, 127);
+            panelInfo2.Size = new Size(254, 127);
             panelInfo2.TabIndex = 4;
             panelInfo2.Visible = false;
             // 
@@ -142,7 +142,7 @@
             panelInfo.Controls.Add(currencyCode);
             panelInfo.Location = new Point(16, 12);
             panelInfo.Name = "panelInfo";
-            panelInfo.Size = new Size(238, 127);
+            panelInfo.Size = new Size(254, 127);
             panelInfo.TabIndex = 3;
             panelInfo.Visible = false;
             // 
@@ -152,6 +152,7 @@
             currencyNamelabel.Enabled = false;
             currencyNamelabel.Font = new Font("Segoe UI", 9.75F);
             currencyNamelabel.Location = new Point(127, 22);
+            currencyNamelabel.Margin = new Padding(10);
             currencyNamelabel.Name = "currencyNamelabel";
             currencyNamelabel.Size = new Size(92, 17);
             currencyNamelabel.TabIndex = 2;
