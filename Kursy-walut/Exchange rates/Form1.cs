@@ -46,6 +46,7 @@ namespace Exchange_rates
                 {
                     url = url + currencyName[selected] + "/?format=json";
                     var res = GetResult(url);
+
                     currentLink.Text = url;
                     currentLink.BorderStyle = BorderStyle.FixedSingle;
 
@@ -84,7 +85,8 @@ namespace Exchange_rates
             StreamReader reader = new StreamReader(response.GetResponseStream());
             string result_JSON = reader.ReadToEnd();
 
-            CurrentCurrency result = JsonConvert.DeserializeObject<CurrentCurrency>(result_JSON);
+            labelJSON.Text = result_JSON;
+            var result = JsonConvert.DeserializeObject<CurrentCurrency>(result_JSON);
             return result;
         }
     }
@@ -98,15 +100,11 @@ class CurrentCurrency
     public List<CurrencyRates> Rates { get; set; }
     public class CurrencyRates
     {
-        public JsonArrayAttribute zero{ get; set; }
+        [JsonProperty("no")]
+        public string Number { get; set; }
+        [JsonProperty("effectiveDate")]
+        public string EffectiveDate { get; set; }
+        [JsonProperty("mid")]
+        public string Mid { get; set; }
     }
-}
-public class zero
-{
-    [JsonProperty("no")]
-    public string Number { get; set; }
-    [JsonProperty("effectiveDate")]
-    public string EffectiveDate { get; set; }
-    [JsonProperty("mid")]
-    public string Mid { get; set; }
 }
